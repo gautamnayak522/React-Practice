@@ -16,6 +16,7 @@ function App() {
       <hr/>
 
       <Employee/>
+      <hr/>
       <Department/>
 
     </div>
