@@ -6,7 +6,7 @@ function User(props) {
             <div className="container">
                 <div className="card">
                     <div className="imgBx">
-                        <img src={`https://i.pravatar.cc/150?img=${props.user.id}`} />
+                        <img src={`https://i.pravatar.cc/150?img=${props.user.id}`} alt='' />
                     </div>
                     <div className="contentBx">
                         <h2>{props.user.name}</h2>

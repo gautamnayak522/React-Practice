@@ -11,18 +11,13 @@ function UserList(props) {
 
     return (
         <>
-            <p>----------------UserList Component-----------------------</p>
+            <p className='text-center'>----------------UserList Component-----------------------</p>
             {/* <p>{props.userdata.}</p> */}
   
             <div className='user-list'>
                 {props.userdata.map(user => (
                     <User key={user.id} user={user}/>
                 ))}
-
-                <address>
-                    Helllo
-                    
-                </address>
             </div>
 
         </>
