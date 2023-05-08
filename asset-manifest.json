@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.1f76d4d8.css",
-    "main.js": "/static/js/main.0102c166.js",
-    "static/js/787.252c5a3f.chunk.js": "/static/js/787.252c5a3f.chunk.js",
-    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
-    "static/media/react.png": "/static/media/react.7147e890c288af6685b3.png",
-    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
-    "static/media/PageNotFound.png": "/static/media/PageNotFound.937f347d41c835d9e940.png",
-    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
-    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
-    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.d87474231f4192884802.ttf",
-    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
-    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
-    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.1f76d4d8.css.map": "/static/css/main.1f76d4d8.css.map",
-    "main.0102c166.js.map": "/static/js/main.0102c166.js.map",
-    "787.252c5a3f.chunk.js.map": "/static/js/787.252c5a3f.chunk.js.map"
+    "main.css": "/React-Practice/static/css/main.a229ec0e.css",
+    "main.js": "/React-Practice/static/js/main.0c4c1f66.js",
+    "static/js/787.252c5a3f.chunk.js": "/React-Practice/static/js/787.252c5a3f.chunk.js",
+    "static/media/fa-solid-900.ttf": "/React-Practice/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/react.png": "/React-Practice/static/media/react.7147e890c288af6685b3.png",
+    "static/media/fa-brands-400.ttf": "/React-Practice/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/PageNotFound.png": "/React-Practice/static/media/PageNotFound.937f347d41c835d9e940.png",
+    "static/media/fa-solid-900.woff2": "/React-Practice/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/fa-brands-400.woff2": "/React-Practice/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/fa-regular-400.ttf": "/React-Practice/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/fa-regular-400.woff2": "/React-Practice/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/React-Practice/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/React-Practice/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "static/media/logo.svg": "/React-Practice/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/React-Practice/index.html",
+    "main.a229ec0e.css.map": "/React-Practice/static/css/main.a229ec0e.css.map",
+    "main.0c4c1f66.js.map": "/React-Practice/static/js/main.0c4c1f66.js.map",
+    "787.252c5a3f.chunk.js.map": "/React-Practice/static/js/787.252c5a3f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f76d4d8.css",
-    "static/js/main.0102c166.js"
+    "static/css/main.a229ec0e.css",
+    "static/js/main.0c4c1f66.js"
   ]
 }
