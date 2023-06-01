@@ -28,9 +28,15 @@ http.interceptors.response.use(function (response) {
   console.log(response);
   return response;
 }, function (error) {
+
   // Any status codes that falls outside the range of 2xx cause this function to trigger
   // Do something with response error
-  console.log(error);
+  console.log(error);  
+
+  // if(error.response.status == 401){
+      
+  // }
+
   return Promise.reject(error);
 });
 

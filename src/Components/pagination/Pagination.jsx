@@ -34,7 +34,7 @@ function Pagination() {
         setTotalPages(res.data.totalPages)
         setTotalRecords(res.data.totalRecords)
       })
-      .catch()
+      .catch(err=>{console.log(err);})
   }
 
   function setFilters(columnName) {
@@ -71,24 +71,24 @@ function Pagination() {
   }
   }
 
-  return (
+  return ( 
     <>
-      <input type="search" placeholder="Search product.." className="form-control my-3 w-25" value={searchString} onChange={(e) => setsearchString(e.target.value)} />
+      <input type=" search" placeholder="Search product.." className="form-control my-3 w-25" value={searchString} onChange={(e) => setsearchString(e.target.value)} />
 
-      {products.length > 0 &&
+      {products.length > 0  &&
         <>
-          <table className="table table-striped text-center">
+          < table className="table table-striped text-center">
             <thead>
               <tr>
                 <th onClick={() => { setFilters('productId') }}> Id {sortColumnName == 'productId' && <span>{addIcon()}</span>}</th>
                 <th onClick={() => { setFilters('productName') }}>Name {sortColumnName == 'productName' && <span>{addIcon()}</span>} </th>
                 <th onClick={() => { setFilters('price') }}>Price {sortColumnName == 'price' && <span>{addIcon()}</span>} </th>
-                <th onClick={() => { setFilters('mafDate') }}>Maf Date {sortColumnName == 'mafDate' && <span>{addIcon()}</span>} </th>
-                <th onClick={() => { setFilters('mafAt') }}>Maf At {sortColumnName == 'mafAt' && <span>{addIcon()}</span>} </th>
+                 <th onClick={() => { setFilters('mafDate') }}>Maf Date {sortColumnName == 'mafDate' && <span>{addIcon()}</span>} </th>
+                <th onClick={( ) => { setFilters('mafAt') }}>Maf At {sortColumnName == 'mafAt' && <span>{addIcon()}</span>} </th>
                 <th onClick={() => { setFilters('sku') }}>SKU {sortColumnName == 'sku' && <span>{addIcon()}</span>} </th>
                 <th onClick={() => { setFilters('categoryName') }}>Qauntity {sortColumnName == 'categoryName' && <span>{addIcon()}</span>} </th>
                 <th onClick={() => { setFilters('subCategoryName') }}>Supplier {sortColumnName == 'subCategoryName' && <span>{addIcon()}</span>} </th>
-                <th onClick={() => { setFilters('description') }}>Description {sortColumnName == 'description' && <span>{addIcon()}</span>} </th>
+                 <th onClick={() => { setFilters('description') }}>Description {sortColumnName == 'description' && <span>{addIcon()}</span>} </th>
                 <th>Action</th>
               </tr>
             </thead>

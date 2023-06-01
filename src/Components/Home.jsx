@@ -3,7 +3,7 @@ import HomePage from "../assets/images/react.png"
 
     return (
         <>
-            <img src={HomePage} className="vh-100 vw-100" alt="Home Page" />
+            <img src={HomePage} className="img-fluid" alt="Home Page" />
         </>
     );
 

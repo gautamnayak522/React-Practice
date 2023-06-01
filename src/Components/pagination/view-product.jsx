@@ -17,7 +17,7 @@ function ViewProduct(props) {
     //     mafAt: '',
     //     sku: '',
     //     categoryName: '',
-    //     subCategoryName: '',
+    //     subCategoryName: '', 
     //     description: '',
     //     quantity: 0,
     //     supplier: ''
@@ -67,7 +67,6 @@ function ViewProduct(props) {
             });
             reset(res.data)
             navigate('/pagination')
-
         })
 
     };

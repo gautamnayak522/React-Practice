@@ -3,11 +3,16 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { LoginService } from "../services/LoginService";
 import { MainContext } from "../Context/MainContext";
 import { toast } from "react-toastify";
+import { connect } from "react-redux";
+import { store } from "../Context/store";
 
 
 function NavBar() {
 
+    const [Amount, setAmount] = useState(store.getState().Amount);
+
     const navigate = useNavigate();
+
     const { isLoggedIn, userName, setLogin, setuserName } = useContext(MainContext);
 
     console.log("navbar render");
@@ -15,10 +20,19 @@ function NavBar() {
     const logout = () => {
         LoginService.logout(setLogin, setuserName);
         navigate("login")
-        toast.success("Logged out successfully",{
+        toast.success("Logged out successfully", {
             position: toast.POSITION.BOTTOM_RIGHT
         })
     }
+
+    useEffect(() => {
+
+        store.subscribe(() => {
+            console.log("Navbar subscribed ", store.getState());
+            setAmount(store.getState().Amount)
+        })
+
+    }, [])
 
     return (
         <>
@@ -50,11 +64,16 @@ function NavBar() {
                             <li className="nav-item">
                                 <NavLink className={({ isActive }) => (isActive ? 'selected' : '') + " nav-link"} to="pagination">Pagination</NavLink>
                             </li>
+
+                            <li className="nav-item">
+                                <NavLink className={({ isActive }) => (isActive ? 'selected' : '') + " nav-link"} to="redux">Redux</NavLink>
+                            </li>
                         </ul>
 
                         {isLoggedIn &&
                             <div>
                                 <span> Welcome  <strong>{userName}</strong> </span>
+                                <span> Current Balance : <strong><span className="fa-solid fa-indian-rupee-sign"></span> {Amount}</strong> </span>
 
                                 <button className="btn btn-danger" onClick={() => { logout() }}>Logout</button>
                             </div>
@@ -69,6 +88,16 @@ function NavBar() {
         </>
     );
 }
+
+
+// const mapStateToProps = (state) => {
+//     // console.warn(state);
+//     return {
+//         Amount: state.Amount
+//     }
+// }
+
+//export default connect(mapStateToProps)(NavBar);
 
 export default NavBar;
 

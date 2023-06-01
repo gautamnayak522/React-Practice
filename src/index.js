@@ -7,15 +7,20 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 import 'bootstrap/dist/css/bootstrap.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'react-toastify/dist/ReactToastify.css';
-
+import { Provider } from 'react-redux';
+import { preloadedState, store } from './Context/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    
-      <App />
- 
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
+
+    <App />
+
+  </Provider>
+
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

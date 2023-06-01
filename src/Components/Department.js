@@ -16,6 +16,9 @@ function Department() {
                 console.log(data)
                 setproducts(data.data);
             })
+            .catch(err => {
+                console.log(err);
+            })
 
 
 

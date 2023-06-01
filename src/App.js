@@ -14,6 +14,8 @@ import ViewProduct from './Components/pagination/view-product';
 import { ToastContainer } from 'react-toastify';
 import { MainContext } from './Context/MainContext';
 import { CheckAuth } from './Gaurds/CheckAuth';
+import Counter from './Components/Counter/Counter';
+import { store } from './Context/store';
 
 function App() {
 
@@ -21,18 +23,33 @@ function App() {
   const [isLoggedIn, setLogin] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  if (!isLoaded) {
+  console.log("i am app 1");
+
+  // if (!isLoaded) {
+  //   if (localStorage.getItem("token")) {
+  //     setuserName(localStorage.getItem("userName"))
+  //     setLogin(true)
+  //     setIsLoaded(true)
+  //     console.log();
+  //     store.dispatch({type:"DEPOSIT",payload: 500})
+  //   }
+  // }
+
+  useEffect(() => {
     if (localStorage.getItem("token")) {
       setuserName(localStorage.getItem("userName"))
       setLogin(true)
       setIsLoaded(true)
     }
-  }
+    store.dispatch({ type: "DEPOSIT", payload: 500 })
+  }, [])
 
-  console.log("i am app");
+  console.log("i am app 2");
+
   return (
     <>
       <MainContext.Provider value={{ isLoggedIn, userName, setLogin, setuserName }}>
+        {/* <Provider store={store}> */}
         <BrowserRouter>
           <Routes>
             <Route path='/' Component={NavBar}>
@@ -43,15 +60,16 @@ function App() {
               <Route path='form-practice' element={<CheckAuth><FormPractice /></CheckAuth>}></Route>
               <Route path='pagination' element={<CheckAuth><Pagination /></CheckAuth>}></Route>
               <Route path='view-product/:id' element={<CheckAuth><ViewProduct /></CheckAuth>}></Route>
+              <Route path='redux' element={<CheckAuth><Counter /></CheckAuth>}></Route>
             </Route>
             <Route path="*" element={<Navigate replace to="/404" />} />
             <Route path="/404" Component={PageNotFound} />
           </Routes>
         </BrowserRouter>
+        {/* </Provider> */}
       </MainContext.Provider>
       <ToastContainer />
     </>
-
   );
 }
 
